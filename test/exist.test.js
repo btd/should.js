@@ -11,8 +11,8 @@ function err(fn, msg) {
     fn();
     should.fail('expected an error');
   } catch (err) {
-    should.equal(msg, err.message);
-    should(err.stack, 'Expected error to have an stack trace');
+    should(msg).eql(err.message);
+    should(err.stack).ok;
 
     var stackTraceFirstLine = err.stack.split('\n')[1];
     var message = 'Expected error to have a proper stack trace showing the file names';

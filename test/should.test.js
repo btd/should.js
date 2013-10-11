@@ -11,18 +11,13 @@ function err(fn, msg) {
     fn();
     should.fail('expected an error');
   } catch (err) {
-    should.equal(msg, err.message);
+    should(msg).eql(err.message);
   }
 }
 
 module.exports = {
   'test double require': function(){
     require('../').should.equal(should);
-  },
-
-  'test assertion': function(){
-    'test'.should.be.a.string;
-    should.equal('foo', 'foo');
   },
 
   'test true': function(){
@@ -128,11 +123,6 @@ module.exports = {
     err(function() {
       ({}).should.be.arguments;
     }, "expected {} to be arguments");
-  },
-
-  'test .equal()': function(){
-    var foo;
-    should.equal(undefined, foo);
   },
 
   'test typeof': function(){

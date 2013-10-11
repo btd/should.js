@@ -1,0 +1,19 @@
+{
+  "name": "should.js",
+  "repo": "btd/should.js",
+  "description": "test framework agnostic BDD-style assertions",
+  "version": "2.0.1",
+  "keywords": ["test", "bdd", "assert"],
+  "dependencies": {},
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js",
+    "lib/should.js",
+    "lib/assert.js",
+    "lib/http.js",
+    "lib/eql.js",
+    "lib/util.js"
+  ]
+}

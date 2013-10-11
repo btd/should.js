@@ -4,6 +4,6 @@ test:
 		--ui exports
 
 browser:
-	@browserify lib/should.js -s should --dg false -o should.js
+	@component build -o . -n should --standalone should
 
 .PHONY: test browser
